@@ -1,0 +1,11 @@
+color:
+	@go build -o bin/color ColoredOutput/main.go
+	@./bin/color --color
+	
+head:
+	@go build -o bin/head HeadFile/main.go
+	@./bin/head --n 5 main.go 
+
+subCommand:build
+	@go build -o bin/command SubCommand/main.go
+	@./bin/command ./subcommand greet
